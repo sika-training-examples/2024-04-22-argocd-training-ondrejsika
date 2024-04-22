@@ -1,11 +1,11 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: os-manifests
+  name: os-manifests2
   namespace: argocd
 spec:
   destination:
-    namespace: os
+    namespace: os2
     server: https://kubernetes.default.svc
   project: default
   source:
@@ -14,3 +14,6 @@ spec:
   syncPolicy:
     syncOptions:
       - CreateNamespace=true
+    automated:
+      prune: false
+      selfHeal: false
