@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: sync-hooks-example
+  name: os-sync-hooks-example
   namespace: argocd
   annotations:
   finalizers:
@@ -9,7 +9,7 @@ metadata:
 spec:
   destination:
     server: https://kubernetes.default.svc
-    namespace: argocd
+    namespace: os
   project: default
   source:
     path: examples/sync-hooks/apps
