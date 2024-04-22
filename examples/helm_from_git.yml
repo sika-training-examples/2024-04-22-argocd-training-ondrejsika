@@ -6,9 +6,9 @@ metadata:
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
-  project: default
+  project: os-foo
   destination:
-    namespace: os2
+    namespace: os-foo
     server: https://kubernetes.default.svc
   syncPolicy:
     automated:
@@ -17,9 +17,9 @@ spec:
     syncOptions:
       - CreateNamespace=true
   source:
-    repoURL: https://github.com/sikalabs/helm-repo-sikalabs.git
+    repoURL: https://github.com/sikalabs/charts.git
     targetRevision: master
-    path: repo/hello-world-0.9.0.tgz
+    path: charts/hello-world
     helm:
       releaseName: helm-from-git
       valuesObject:
