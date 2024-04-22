@@ -8,3 +8,6 @@ dependencies:
 - name: hello-world
   version: 0.9.0
   repository: https://helm.sikalabs.io
+- name: one-image
+  version: 1.17.0
+  repository: https://helm.sikalabs.io
