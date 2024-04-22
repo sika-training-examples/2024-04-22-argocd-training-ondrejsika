@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: AppProject
 metadata:
-  name: bar
+  name: os-bar
   namespace: argocd
 spec:
   clusterResourceWhitelist:
@@ -19,3 +19,4 @@ spec:
     kind: allow
     schedule: 0 * * * *
     timeZone: UTC
+    manualSync: true
