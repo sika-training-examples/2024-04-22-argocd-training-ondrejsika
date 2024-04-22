@@ -15,7 +15,7 @@ spec:
   syncWindows:
   - applications:
     - '*'
-    duration: 10m
+    duration: 1m
     kind: allow
     schedule: 0 * * * *
     timeZone: UTC
