@@ -12,7 +12,7 @@ spec:
   project: default
   source:
     path: apps
-    repoURL: https://github.com/ondrejsika/argocd-training.git
+    repoURL: https://gitlab.sikademo.com/argocd/os.git
     directory:
       recurse: true
   syncPolicy:
