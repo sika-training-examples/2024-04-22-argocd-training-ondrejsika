@@ -1,14 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: helm-from-git
+  name: os-helm-from-git2
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   project: default
   destination:
-    namespace: examples
+    namespace: os2
     server: https://kubernetes.default.svc
   syncPolicy:
     automated:
@@ -17,10 +17,12 @@ spec:
     syncOptions:
       - CreateNamespace=true
   source:
-    repoURL: https://github.com/sikalabs/charts.git
-    targetRevision: HEAD
-    path: charts/hello-world
+    repoURL: https://github.com/sikalabs/helm-repo-sikalabs.git
+    targetRevision: master
+    path: repo/hello-world-0.9.0.tgz
     helm:
       releaseName: helm-from-git
-      values: |
+      valuesObject:
         replicas: 3
+        TEXT: "Hello ArgoCD Training"
+        host: os2-hello.k8s.sikademo.com
