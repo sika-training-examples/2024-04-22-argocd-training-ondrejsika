@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: sync-waves-example
+  name: os-sync-waves-example
   namespace: argocd
   annotations:
   finalizers:
