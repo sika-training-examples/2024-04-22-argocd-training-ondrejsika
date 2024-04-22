@@ -1,14 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: helm-with-dependencies
+  name: os-helm-with-dependencies
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   project: default
   destination:
-    namespace: examples
+    namespace: os4
     server: https://kubernetes.default.svc
   syncPolicy:
     automated:
