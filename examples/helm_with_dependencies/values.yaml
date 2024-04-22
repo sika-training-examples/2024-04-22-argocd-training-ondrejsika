@@ -1,3 +1,6 @@
 hello-world:
   replicas: 3
   host: os-hello4.k8s.sikademo.com
+one-image:
+  host: os4.k8s.sikademo.com
+  image: sikalabs/iceland-2
